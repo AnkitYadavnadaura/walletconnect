@@ -18,13 +18,13 @@ const wagmiConfig = createConfig({
 const ethereumClient = new EthereumClient(wagmiConfig, chains);
 
 export default function Home() {
-  const [account, setAccount] = useState(null);
-  const [provider, setProvider] = useState(null);
-  const [balance, setBalance] = useState(null);
+  const [account, setAccount] = useState<string | null>(null);
+  const [provider, setProvider] = useState<ethers.providers.Web3Provider | null>(null);
+  const [balance, setBalance] = useState<string | null>(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.ethereum) {
-      setProvider(new ethers.providers.Web3Provider(window.ethereum));
+    if (typeof window !== 'undefined' && (window as any).ethereum) {
+      setProvider(new ethers.providers.Web3Provider((window as any).ethereum));
     }
   }, []);
 
