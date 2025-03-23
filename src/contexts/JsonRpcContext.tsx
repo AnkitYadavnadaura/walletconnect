@@ -63,7 +63,7 @@ import {
   WalletGrantPermissionsReturnType,
 } from "../constants";
 import { useChainData } from "./ChainDataContext";
-import { rpcProvidersByChainId } from "../../src/helpers/api";
+import { rpcProvidersByChainId } from "../helpers/api";
 import { signatureVerify, cryptoWaitReady } from "@polkadot/util-crypto";
 
 import {
