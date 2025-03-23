@@ -155,6 +155,14 @@ const Home: NextPage = () => {
       chainId: "eip155:5",
     });
   }
+const hasEIP7592RequiredCapabilities = (session) => {
+  if (!session || !session.sessionProperties) return false;
+  
+  const capabilities = session.sessionProperties["capabilities"];
+  
+  // Ensure capabilities exist and contain the required feature
+  return capabilities && capabilities.includes("eip7592:optionalPrefix");
+};
 
   const getEthereumActions = (
     chainId: string,
