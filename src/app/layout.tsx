@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../style/globals.css"; // Optional global styles
+import "../styles/globals.css"; // Optional global styles
 
 export const metadata: Metadata = {
   title: "Wallet connect",
