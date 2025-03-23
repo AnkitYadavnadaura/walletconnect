@@ -1,3 +1,4 @@
+"use client";
 import type { NextPage } from "next";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
