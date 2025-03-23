@@ -1,4 +1,6 @@
 "use client";
+export const dynamic = "force-dynamic"; // Next.js 13+  
+
 import type { NextPage } from "next";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
